@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>App Razing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="search_box.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="main.js"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  width: 100%;
+  background: #f1f1f1;
+  
+}
+
+/* Header/Blog Title */
+.header {
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  background:#4A90E2;
+  color: white;
+  clear: both;
+ 
+
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333; 
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Search Here */
+
+
+.container {  
+padding: 1px;
+}
+ 
+.search-box {  
+display: inline-block;  
+width: 100%;  
+border-radius: 3px;  
+padding: 4px 55px 4px 15px;  
+position: relative;  
+background: #fff;  
+border: 1px solid #ddd;  
+-webkit-transition: all 200ms ease-in-out;  
+-moz-transition: all 200ms ease-in-out;  
+transition: all 200ms ease-in-out;
+}
+ 
+.search-box.hovered, .search-box:hover, .search-box:active {  
+border: 1px solid #aaa;
+}
+ 
+.search-box input[type=text] { 
+ border: none;  
+box-shadow: none;  
+display: inline-block;  
+padding: 0;  
+background: transparent;
+}
+ 
+.search-box input[type=text]:hover, .search-box input[type=text]:focus, .search-box input[type=text]:active {  
+box-shadow: none;
+}
+ 
+.search-box .search-btn {  
+position: absolute;  
+right: 2px;  
+top: 2px;  
+color: #aaa;  
+border-radius: 3px;  
+font-size: 21px;  
+padding: 5px 10px 1px;  
+-webkit-transition: all 200ms ease-in-out;  
+-moz-transition: all 200ms ease-in-out;  
+transition: all 200ms ease-in-out;
+}
+ 
+.search-box .search-btn:hover {  
+color: #fff;  
+background-color: #8FBE00;
+}
+
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+  padding: 10px;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+
+
+a.hello:hover{
+            color:red;
+        }
+
+a.more:hover {
+  color:red; 
+
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 2px;
+  text-align: center;
+  background: #ddd;
+  
+  margin-top: 20px;
+  
+}
+.font-sizelast {
+  font-size: 15px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>App Razing- Kho ứng dụng hàng đầu TDT</h1>
+  <p>Những gì bạn cần, chúng tôi đều có!</p>
+</div>
+
+<div class="topnav">
+  <a href="#">Ứng Dụng</a>
+  <a href="#">Game</a>
+  <a href="#">Tập Tin Crack</a>
+  <a href="#" style="float:right">Đăng nhập</a>
+  <a href="#" style="float:right">Đăng kí</a>
+</div>
+
+
+<div class="container"> 
+  <div class="row"> 
+   <div class="col-md-12"> 
+    <h2 class="text-center"></h2> 
+   </div> 
+  </div> 
+  <div class="row"> 
+   <div class="col-md-6"> 
+    <div class="search-box"> 
+     <form class="search-form" > <input class="form-control" placeholder="Tìm kiếm" type="text"> 
+      <button class="btn btn-link search-btn"> <i class="glyphicon glyphicon-search"></i> 
+      </button> 
+     </form> 
+    </div> 
+   </div> 
+  </div>
+ </div>
+
+
+
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>APP HOT</h2>
+      
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <a href=".." class="more">Xem thêm  </a> 
+    </div>
+    <div class="card">
+      <h2>RECOMMEND APP</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <a href=".." class="more">Xem thêm  </a> 
+    </div>
+    <div class="card">
+      <h2>MỚI NHẤT</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <a href=".." class="more">Xem thêm  </a> 
+    </div>
+  </div>
+  
+  
+  <div class="rightcolumn">
+    <div class="card">
+      <h3>Danh mục Ứng Dụng</h3>
+      <a href=".." class="hello">SÁCH & TÀI LIỆU THAM KHẢO  </a><br />
+      <a href=".." class="hello">DOANH NGHIỆP  </a> <br />
+      <a href=".." class="hello">LIÊN LẠC</a> <br />
+      <a href=".." class="hello">GIÁO DỤC  </a> <br />
+      <a href=".." class="hello">GIẢI TRÍ   </a> <br />
+      <a href=".." class="hello">TÀI CHÍNH   </a> <br />
+      <a href=".." class="hello">SỨC KHỎE - THỂ HÌNH  </a> <br />
+      <a href=".." class="hello">LỐI SỐNG </a> <br />
+      <a href=".." class="hello">Y TẾ  </a><br />
+      <a href=".." class="hello">TIN TỨC & TẠP CHÍ   </a><br />
+      <a href=".." class="hello">NHIẾP ẢNH</a> <br />
+      <a href=".." class="hello">SẢN XUẤT </a> <br />
+      <a href=".." class="hello">XÃ HỘI   </a> <br />
+      <a href=".." class="hello">THỂ THAO   </a> <br />
+      <a href=".." class="hello">CÔNG CỤ   </a> <br />
+      <a href=".." class="hello">THỜI TIẾT   </a> <br />
+      <a href=".." class="hello">PHƯƠNG TIỆN & VIDEO   </a> <br />
+      <a href=".." class="hello">VẬN TẢI  </a>
+      <p></p>
+    </div>
+    
+    
+    <div class="card">
+      <h3>Danh mục Game</h3>
+      <a href=".." class="hello">HÀNH ĐỘNG  </a><br />
+      <a href=".." class="hello">CÂU ĐỐ  </a> <br />
+      <a href=".." class="hello">THÔNG THƯỜNG  </a> <br />
+      <a href=".." class="hello">ĐUA XE  </a> <br />
+      <a href=".." class="hello">THỂ THAO   </a> <br />
+      <a href=".." class="hello">TRUYỆN TRANH   </a> <br />
+      <a href=".." class="hello">TÌM Ô CHỮ  </a> <br />
+      <a href=".." class="hello">PHIÊU LƯU  </a> <br />
+      <a href=".." class="hello">DẠNG BẢNG  </a><br />
+      <a href=".." class="hello">THẺ   </a><br />
+      <a href=".." class="hello">MÔ PHỎNG   </a> <br />
+      <a href=".." class="hello">NHẬP VAI </a> <br />
+      <a href=".." class="hello">CHIẾN THUẬT   </a> <br />
+      <a href=".." class="hello">TRẮC NGHIỆM   </a> <br />
+      <a href=".." class="hello">GIA ĐÌNH  </a> <br />
+      <a href=".." class="hello">GIÁO DỤC   </a> <br />
+      <a href=".." class="hello">TRÒ CHƠI ĐIỆN TỬ   </a> <br />
+  
+      <p></p>
+      
+    </div>
+    
+    
+    <div class="card">
+      <h3>File đã cracked</h3>
+      <a href=".." class="hello">GTA V   </a><br />
+      <a href=".." class="hello">LỐI SỐNG   </a> <br />
+      <a href=".." class="hello">Y TẾ   </a> <br />
+      <p></p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h3 class="font-sizelast">App Razing – Kho tải ứng dụng & game online, offline hay cho Android</h3>
+  <p></p>
+  <p>App Razing - Kho tải miễn phí file APK của game & ứng dụng cho Android. Tải game online, offline hay cho Android và ứng dụng Android hay nhất, mới nhất 2018, 2017, 2016 … cho Android (ứng dụng giả lập nhẹ nhất, ứng dụng auto game, app đọc sách …). Tại App Razing, bạn có thể tải miễn phí file APK cho hàng loạt ứng dụng & game hot trên Android.   </p><br />
+</div>
+
+</body>
+</html>
